@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<h:body>
+    <ui:composition template="WEB-INF/templates/loginTemplate.xhtml">
+        <ui:define name="content">
+            <h:outputStylesheet name="signin.css" library="css"/>
+            <h:panelGroup layout="block" styleClass="form-signin mainContainer">
+                <h:form>
+                    <h:graphicImage styleClass="mb-4" name="bootstrap-logo.svg" library="images" alt="bootstrap logo" width="72" height="57"/>
+                    <h1 class="h3 mb-3 fw-normal">Please log in</h1>
+                    <h:outputLabel for="inputUsername" styleClass="visually-hidden" value="Username"/>
+                    <h:inputText id="inputUsername" styleClass="form-control" a:placeholder="Username" required="true" value="#{loginBean.credential.username}"/>
+                    <h:outputLabel for="inputPassword" styleClass="visually-hidden" value="Password"/>
+                    <h:inputSecret id="inputPassword" styleClass="form-control" a:placeholder="Password" required="true" value="#{loginBean.credential.password}"/>
+                    <h:panelGroup layout="block" styleClass="checkbox mb-3">
+                        <h:outputLabel>
+                            <h:selectBooleanCheckbox id="chkRememberMe"/> Remember me
+                        </h:outputLabel>
+                    </h:panelGroup>
+                    <h:commandButton styleClass="w-100 btn btn-lg btn-primary" type="submit" value="Log in" action="#{loginBean.submit}"/>
+                    <h:outputText styleClass="mt-5 mb-3 text-muted" value="&copy; 2017-2021"/>
+                </h:form>
+            </h:panelGroup>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <meta name="description" content="template page"/>
+    <meta name="author" content="Kurtis Hanson"/>
+
+    <title>JSF Welcome Template Title</title>
+</h:head>
+
+<h:body styleClass="text-center text-white bg-dark d-flex h-100">
+    <h:panelGroup layout="block" styleClass="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <h:panelGroup layout="block" styleClass="header mb-auto">
+            <ui:insert name="header">
+                <ui:include src="headerTemplate.xhtml"/>
+            </ui:insert>
+        </h:panelGroup>
+
+        <h:panelGroup layout="block" styleClass="content px-3">
+            <ui:insert name="content">
+                <ui:include src="contentTemplate.xhtml"/>
+            </ui:insert>
+        </h:panelGroup>
+
+        <h:panelGroup layout="block" styleClass="footer mt-auto text-white-50">
+            <ui:insert name="footer">
+                <ui:include src="footerTemplate.xhtml"/>
+            </ui:insert>
+        </h:panelGroup>
+    </h:panelGroup>
+</h:body>
+
+</html>

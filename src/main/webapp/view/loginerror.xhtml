@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:body>
+    <ui:composition template="../WEB-INF/templates/welcomeTemplate.xhtml">
+        <ui:define name="content">
+            <h:outputStylesheet name="webjars/bootstrap/5.0.0-beta2/css/bootstrap.min.css"/>
+            <h:outputStylesheet name="style.css" library="css"/>
+            <h:outputStylesheet name="welcome.css" library="css"/>
+
+            <h:panelGroup layout="block" styleClass="mainContainer">
+                <h1>Incorrect username or password!</h1>
+                <p class="lead">Your attempted login details do not exist within our system. Feel free to try again, but try not to enter the same username as password as before.</p>
+                <p class="lead"><em>"Insanity: doing the same thing over and over again and expecting different results."</em></p>
+                <h:panelGroup>
+                    <h:form>
+                        <h:commandButton action="#{loginBean.logout}" styleClass="btn btn-lg btn-secondary fw-bold border-white bg-white" value="Try Again"/>
+                    </h:form>
+                </h:panelGroup>
+            </h:panelGroup>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>
