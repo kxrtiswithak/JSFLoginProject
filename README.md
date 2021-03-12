@@ -9,7 +9,7 @@
 ## Table of Contents
 
 #### [About :question:](#about)
-#### [Dependencies :computer:](#depdendencies)
+#### [Dependencies :computer:](#dependencies)
 #### [Package Architecture :tokyo_tower:](#packages)
 #### [Security :tshirt:](#security)
 #### [Login :performing_arts:](#login)
