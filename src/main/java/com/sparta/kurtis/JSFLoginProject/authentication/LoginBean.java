@@ -65,7 +65,7 @@ public class LoginBean {
 
     public String logout() throws ServletException {
         ExternalContext externalContext = facesContext.getExternalContext();
-        ((HttpServletRequest)externalContext.getRequest()).logout();
+        ((HttpServletRequest) externalContext.getRequest()).logout();
         return "/login.xhtml?faces-redirect=true";
     }
 }
